@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия Груминга «Нам покороче» | Ярославль</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Мягкий и дружелюбный шрифт Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#F4F1EA',  
+                            accent: '#4A7A56', 
+                            dark: '#2C3E2B',   
+                            warm: '#E2DACB'    
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased">
+
+    <!-- БЛОК 1: ШАПКА (HEADER) -->
+    <header class="sticky top-0 z-50 bg-brand-light/90 backdrop-blur-md border-b border-brand-warm/40">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2 group">
+                <svg class="w-9 h-9 text-brand-accent transition-transform group-hover:scale-110 duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5c-1.66 0-3 1.34-3 3 0 2 3 5 3 5s3-3 3-5c0-1.66-1.34-3-3-3Z"/>
+                    <path d="M14 16c0 1.1-.9 2-2 2s-2-.9-2-2"/>
+                    <path d="M5 14c-1.66 0-3-1.34-3-3 0-2 3-5 3-5s3 3 3 5c0 1.66-1.34 3-3 3Z"/>
+                    <path d="M19 14c1.66 0 3-1.34 3-3 0-2-3-5-3-5s-3 3-3 5c0 1.66 1.34 3 3 3Z"/>
+                </svg>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-xl tracking-tight leading-none text-brand-dark">Нам покороче</span>
+                    <span class="text-xs text-brand-accent font-semibold">Уютная студия на Пятерке</span>
+                </div>
+            </a>
+
+            <a href="#booking" class="bg-brand-accent hover:bg-brand-dark text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-sm transition-colors duration-300 transform active:scale-95">
+                Записаться онлайн
+            </a>
+        </div>
+    </header>
+
+    <!-- ПРИВЕТСТВЕННЫЙ БАННЕР -->
+    <section class="max-w-6xl mx-auto px-4 pt-8 pb-4">
+        <div class="bg-brand-warm/30 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="max-w-xl text-center md:text-left">
+                <span class="bg-brand-accent/10 text-brand-accent text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">С любовью ко всем животным</span>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-3 mb-4 leading-tight">Верну вашим любимцам красоту и хорошее самочувствие!</h1>
+                <p class="text-gray-600 text-base leading-relaxed mb-4">Привет! Меня зовут <span class="font-bold text-brand-dark">Дарья</span>. Жду всех трусишек и врединок на стрижку и уход. В моей студии питомцам обеспечены бережные гигиенические мероприятия без стресса.</p>
+                <div class="flex items-center space-x-2 text-sm font-bold text-brand-dark bg-white/50 inline-block px-4 py-2 rounded-lg">
+                    <span>🎁</span>
+                    <span>Советы по уходу за шерстью — в подарок!</span>
+                </div>
+            </div>
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0 relative group">
+                <!-- Плейсхолдер, сюда клиентка потом вставит свое фото -->
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80" alt="Грумер Дарья" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 2: УСЛУГИ И ЦЕНЫ -->
+    <section id="services" class="max-w-6xl mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-brand-dark">Популярные услуги</h2>
+            <p class="text-sm text-gray-500 mt-2">Купание, состригание колтунов и гигиена из соображения здоровья</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Карточка 1 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-warm/20 hover:shadow-md transition-shadow flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-brand-light rounded-xl flex items-center justify-center text-brand-accent mb-4">✂️</div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">Комплексный уход</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed mb-4">Стрижка, купание, расчесывание и аккуратное состригание скатавшейся в колтуны шерсти.</p>
+                </div>
+                <div class="border-t border-gray-100 pt-4 mt-auto">
+                    <span class="font-extrabold text-brand-accent text-lg">Запросить прайс</span>
+                </div>
+            </div>
+
+            <!-- Карточка 2 (Эксклюзив из ВК) -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-accent/50 hover:shadow-md transition-shadow flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-20 h-20 bg-brand-accent/10 rounded-full blur-xl"></div>
+                <div>
+                    <div class="w-12 h-12 bg-brand-accent text-white rounded-xl flex items-center justify-center mb-4 shadow-sm">🤫</div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">Сушка без стресса</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed mb-4">Новая тихая сушильная камера! Идеально для пушистиков, которые боятся фена. Комфорт и безопасность.</p>
+                </div>
+                <div class="border-t border-gray-100 pt-4 mt-auto">
+                    <span class="font-extrabold text-brand-accent text-lg">Хит студии 🔥</span>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-warm/20 hover:shadow-md transition-shadow flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-brand-light rounded-xl flex items-center justify-center text-brand-accent mb-4">🐾</div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">Гигиена когтей и ушей</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed mb-4">Стрижка отросших когтей и бережная очистка ушей животным для поддержания здоровья.</p>
+                </div>
+                <div class="border-t border-gray-100 pt-4 mt-auto">
+                    <span class="font-extrabold text-brand-accent text-lg">Быстро и нежно</span>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-warm/20 hover:shadow-md transition-shadow flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-brand-light rounded-xl flex items-center justify-center text-brand-accent mb-4">🛁</div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">Уход за крупными породами</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed mb-4">Работаем даже с крупными породами (например, Акита, Спаниели, Бульдоги). Вычес подшерстка и мытье.</p>
+                </div>
+                <div class="border-t border-gray-100 pt-4 mt-auto">
+                    <span class="font-extrabold text-brand-accent text-lg">Для больших хвостиков</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 3: ФОТО РАБОТ -->
+    <section id="gallery" class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-brand-dark">Счастливые и красивые гости</h2>
+                <p class="text-sm text-gray-500 mt-2">После процедур с приятным ароматом и без стресса</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500&q=80" alt="Стрижка собаки" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=500&q=80" alt="Шпиц груминг" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=500&q=80" alt="Чистый пес" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1608096299210-db7e38487075?w=500&q=80" alt="Уход за шерстью" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 4: КАК ДОБРАТЬСЯ -->
+    <section id="contacts" class="max-w-6xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-brand-warm/20 flex flex-col md:flex-row gap-8 items-center">
+            
+            <div class="w-full md:w-1/2 space-y-6">
+                <div>
+                    <span class="text-brand-accent font-bold text-xs uppercase tracking-wider">Ждем вас в гости</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-brand-dark mt-1">Контакты студии</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 text-brand-accent">📍</div>
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Адрес</h4>
+                            <p class="text-gray-500 text-sm">г. Ярославль, ул. Жукова, 31/17 (Ленинский район)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 text-brand-accent">⏰</div>
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Режим работы</h4>
+                            <p class="text-gray-500 text-sm">Пн-Сб: 09:00 - 20:00</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <div class="mt-1 text-brand-accent">📱</div>
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Телефон</h4>
+                            <p class="text-gray-500 text-sm">+7 (915) 990-83-38</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Заглушка под карту -->
+            <div class="w-full md:w-1/2 h-64 bg-brand-light rounded-2xl relative overflow-hidden border border-brand-warm/50 flex flex-col items-center justify-center p-4 text-center">
+                <div class="w-12 h-12 bg-brand-accent/10 rounded-full flex items-center justify-center text-brand-accent mb-2">🗺️</div>
+                <p class="font-bold text-brand-dark text-sm">Интерактивная карта Яндекс</p>
+                <p class="text-gray-400 text-xs mt-1">Здесь будет встроена карта с меткой: ул. Жукова, 31/17</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 5: КНОПКА ЗАПИСИ (ФОКУС НА ВК ЧАТ-БОТА) -->
+    <section id="booking" class="max-w-4xl mx-auto px-4 pb-16 text-center">
+        <div class="bg-brand-dark text-white rounded-3xl py-10 px-6 md:px-12 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 text-white/5 text-9xl pointer-events-none select-none">🐾</div>
+            
+            <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Запишитесь онлайн за 1 минуту</h2>
+            <p class="text-brand-light/80 text-sm max-w-lg mx-auto mb-8">
+                Нажмите на кнопку ниже, чтобы открыть наш умный чат-бот ВКонтакте. Он поможет выбрать услугу, подберет удобное время для визита и моментально внесет запись!
+            </p>
+            
+            <div class="inline-block group">
+                <!-- Ссылка ведет напрямую в диалог сообщества клиентки -->
+                <a href="https://vk.me/grooming__yar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-white text-brand-dark hover:bg-brand-light font-extrabold px-8 py-4 rounded-full shadow-lg transition-transform duration-300 transform group-hover:-translate-y-1 text-base md:text-lg">
+                    <svg class="w-6 h-6 text-[#4C75A3]" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M15.025 21.03c-6.83 0-10.74-4.68-10.9-12.47h3.42c.11 5.71 2.62 8.13 4.61 8.63V8.56h3.22v4.92c1.97-.21 4.04-2.47 4.74-4.92h3.22a11.38 11.38 0 01-4.35 6.31 11.95 11.95 0 015.34 6.16h-3.56c-.66-2.07-2.32-3.66-4.61-3.89v3.89h-3.13z"/>
+                    </svg>
+                    <span>Записаться через ВКонтакте</span>
+                </a>
+            </div>
+
+            <div class="mt-6 flex items-center justify-center">
+                <div class="flex items-center space-x-2 text-xs text-brand-light/90 bg-white/10 py-2 px-4 rounded-full border border-white/10">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <span>Бот работает автоматически 24/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="border-t border-brand-warm/30 bg-brand-light py-6 text-center text-xs text-gray-400">
+        <p>© 2026 Студия Груминга «Нам покороче». Ярославль.</p>
+    </footer>
+
+</body>
+</html>
